@@ -1,0 +1,47 @@
+<div class="panel panel-primary logon">
+	<div class="panel-heading">
+		图书管理登陆
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-12">
+				<form class="form-horizontal" role="form" ng-controller="LogonCtrl">
+					<div class="form-group">
+						<label class="col-md-2 control-label">
+							Name:
+						</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" ng-model="user.name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">
+							Password:
+						</label>
+						<div class="col-md-10">
+							<input type="password" class="form-control" ng-model="user.password">
+						</div>
+					</div>
+					<div class="col-md-offset-4 col-md-8">
+						<button type="submit" class="btn btn-primary" ng-click="logon();">
+							Logon
+						</button>
+						&nbsp;&nbsp;
+						<button type="submit" class="btn btn-primary" ng-click="reset();">
+							Reset
+						</button>
+
+					</div>
+				</form>
+				<br>
+				<br>
+				<div class="col-md-offset-4 col-md-8" ng-controller="RegistryCtrl">
+						<button type="submit" class="btn btn-primary" ng-click="forwardToRegPage();">
+							Registry New User
+						</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

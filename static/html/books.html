@@ -1,0 +1,35 @@
+<table class="table table-bordered table-condensed" style="width:70%;" ng-init="listOwnBooks();">
+	<thread>
+		<td>Name</td>
+		<td>Total Number</td>
+		<td>Current Number</td>
+		<td>Operation</td>
+	</thread>
+	<tr ng-repeat="book in books">
+		<td>{{book.bookName}}</td>
+		<td>{{book.totalNumber}}</td>
+		<td>{{book.curNumber}}</td>
+		<td>
+			<a href="" ng-click="deleteBook(book.bookId);">Delete</a> &nbsp;&nbsp;
+			<a href="" ng-click="forwardToEditPage(book.bookId);">Edit</a>
+			<a ng-show="showBorrow" href="" type = "submit" ng-click="borrowBook(book.bookId);">Borrow</a>
+			<a ng-hide="showBorrow" href="" type = "submit" ng-click="returnBook(book.bookId);">Return</a>
+		</td>
+	</tr>
+	<tr>
+	<div class="col-md-offset-4 col-md-8">
+		<button type="button" class="btn btn-primary" ng-click="forwardToAddPage();">
+			Add Book
+		</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" class="btn btn-primary" ng-click="listBooks();">
+			Show All books
+		</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" class="btn btn-primary" ng-click="listOwnBooks();">
+			Show Own books
+		</button>
+
+	</div>
+	</tr>
+</table>
