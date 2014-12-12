@@ -81,7 +81,7 @@ public class LibraryRepository
 
   public List<Library> findByUsersUserId(String userId)
   {
-    // Query query = new Query(Criteria.where("users.$userId").is(new ObjectId(userId)));
+    // Query query = new Query(Criteria.where("users.$id").is(new ObjectId(userId)));
     return mongoTemplate.find(query(Criteria.where("users._id").is(new ObjectId(userId))), Library.class);
 
   }
